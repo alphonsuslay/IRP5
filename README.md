@@ -149,7 +149,7 @@
 
 ## MIT App Inventor
 
-1. Setting up & Running the Mobile Application
+1. **Setting up & Running the Mobile Application**: <br>
    
     • Ensure that you have MIT App Companion installed.<br>
     • Download the *aia source file* above and import it into your MIT App Inventor<br>
@@ -157,4 +157,16 @@
     • NOTE: The application only works on Android.
 
 
-   
+## Telegram Bot
+
+1. **Setting up & Running the Telegram Bot**: >br>
+
+    • Head over to Firebase Console. <br>
+    • Click on the Settings Icon beside "Project Overview" > Open Project Settings > Click on Service Account tabs > Click on Generate New Private Key <br>
+    • Copy the content inside and paste it into credentials.json
+
+2. **Creating Telegram Bot***: <br>
+
+    • Start a new conversation with @botfather.
+    • Type /newbot > Give the bot a name > Give the Bot a Username
+    • Copy the HTTP API Token.
