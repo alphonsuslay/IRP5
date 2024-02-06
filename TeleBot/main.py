@@ -4,8 +4,8 @@ from telegram.ext import Application, CommandHandler, ContextTypes, CallbackCont
 import firebase_admin
 from firebase_admin import credentials, db
 
-token: Final = '6715236288:AAEREffhwmbrc6F6C9P4VQ-jcn9ZH3lEVHQ'
-username: Final = '@thehealthcats'
+token: Final = ''
+username: Final = ''
 
 
 cred = credentials.Certificate("credentials.json")
