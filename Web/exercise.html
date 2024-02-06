@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/root.css" rel="stylesheet">
+  <link href="css/home.css" rel="stylesheet">
+  <link href="css/chatbot.css" rel="stylesheet">
+
+
+  <link rel="icon" href="assets/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <script src="script/system/cookies.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+  <title>Exercise</title>
+</head>
+<body>
+
+  <header class="header">
+  </header>
+  
+  <div class="container">
+    <!-- SIDEBAR START -->
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <img src="assets/heart-beat.png">
+          <h2>TheHealthCats</h2>
+        </div>
+      </div>
+      <div class="sidebar">
+        <a href="../dashboard/card.html" >
+          <span class="material-symbols-outlined">dashboard</span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="../exercise.html">
+          <span class="material-symbols-outlined">fitness_center</span>
+          <h3>Exercise</h3>
+        </a>
+        <a href="../discover.html">
+          <span class="material-symbols-outlined">search</span>
+          <h3>Discover</h3>
+        </a>
+        <a href="../mqtt.html">
+          <span class="material-symbols-outlined">online_prediction</span>
+          <h3>MQTT</h3>
+        </a>
+        <a href="../settings.html">
+          <span class="material-symbols-outlined">settings</span>
+          <h3>Settings</h3>
+        </a>
+        <div id="whiteline"></div>
+        <a href="../authentication.html">
+          <span id="signOutButton" class="material-symbols-outlined">logout</span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+
+    <main>
+      <section class="wrapper">
+        <div class="wrapper-top">
+          <h1>Exercise</h1>
+          <div class="profile-photo">
+            <a href="settings.html">
+              <img src="./assets/pfp.jpeg" alt="Profile Photo">
+            </a>
+          </div>
+
+        </div>
+
+        <div class="exercise-main">
+          <div class="exercise left">
+            <h1>Cardio</h1>
+
+            <div class="exercise-content">
+              <h4>Warm-Up : 5-10mins</h4>
+              <h3> • Jumping Jacks: 1 minute</h3>
+              <h3> • High knees: 1 minute</h3>
+              <h3> • Butt kicks: 1 minute</h3>
+              <h3> • Jump rope (or imaginary jump rope): 3 minutes</h3>
+              <h3> • Dynamic stretches (arm circles, leg swings, torso twists): 5 minutes</h3>
+
+              <h4>Exercises : Pick 3-4, each 20-30 secs, rest 10-15 seconds between each</h4>
+              <h3> • Running in Place</h3>
+              <h3> • Jumping Lunges</h3>
+              <h3> • High-Intensity Interval Training (HIIT) Sprints</h3>
+              <h5>Sprint at maximum effort for 20-30 seconds.</h5>
+              <h5>Walk or jog in place for 10-15 seconds as active recovery.</h5>
+              <h5>Repeat the cycle for 5-10 rounds.</h5>
+              <h3> • Burpees</h3>
+              <h3> • Mountain Climbers</h3>
+
+              <h4>Cool Down : 5-10 minutes</h4>
+              <h3> • Brisk walking or slow jogging: 3-5 minutes</h3>
+              <h3> • Static stretches (hamstring stretch, calf stretch, quad stretch, hip flexor stretch): 5 minutes</h3>
+              <h3> • Deep diaphragmatic breathing and relaxation exercises.</h3>
+            </div>
+          </div>
+          <div class="exercise right">
+            <h1>Strength Training</h1>
+
+            <div class="exercise-content">
+              <h4>Warm-Up : 5-10mins</h4>
+              <h3> • Light cardiovascular exercise (brisk walking, jogging, or jump rope): 5 minutes</h3>
+              <h3> • Dynamic stretches (arm circles, leg swings, hip circles): 5 minutes</h3>
+
+              <h4>Exercises : 3 sets of 10-12 reps per exercise</h4>
+              <h3> • Squats</h3>
+              <h3> • Push-ups</h3>
+              <h3> • Dumbbell Lunges</h3>
+              <h5>Hold a dumbbell in each hand.</h5>
+              <h5>Step forward with one foot and lower your body until both knees are bent at a 90-degree angle.</h5>
+              <h5>Push back to the starting position and repeat on the other leg.</h5>
+              <h3> • Dumbbell Rows</h3>
+              <h5>Stand with a dumbbell in each hand, palms facing your body.</h5>
+              <h5>Bend at the hips, keeping your back straight.</h5>
+              <h5>Pull the dumbbells to your sides, squeezing your shoulder blades.</h5>
+              <h5>Lower the weights back to the starting position.
+              </h5>
+              <h3> • Bench Press</h3>
+              <h3> • Plank : Hold for 30-60 seconds</h3>
+
+              <h4>Cool Down : 5-10 minutes</h4>
+              <h3> • Static stretches for major muscle groups (hamstrings, quadriceps, chest, back).
+              </h3>
+              <h3> • Deep diaphragmatic breathing and relaxation exercises.
+              </h3>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>Chatbot</h2>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Welcome to thehealthcats, <br>type <strong>!help</strong> for guide</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script type="module" src="script/system/auth.js"></script>
+  <script src="script/chatbot.js"></script>
+
+
+
+</body>
+</html>

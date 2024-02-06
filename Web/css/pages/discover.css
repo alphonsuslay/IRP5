@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--color-dark);
+}
+
+.container {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 14rem auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins, sans-serif;
+  font-size: 0.88rem;
+  background: black;
+  user-select: none;
+  overflow-x: hidden;
+}
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: white;
+
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: white;
+
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 0.77rem;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text-muted {
+  color: var(--color-info-dark);
+}
+
+p {
+  color: var(--color-dark-variant);
+}
+
+b {
+  color: var(--color-dark);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.danger {
+  color: var(--color-danger);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 94%;
+    grid-template-columns: 7rem auto;
+  }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+
+  aside .logo h2 {
+    display: none;
+  }
+
+  aside .sidebar h3 {
+    display: none;
+  }
+
+  aside .siebar a {
+    width: 5.6rem;
+  }
+
+  aside .sidebar a:last-child {
+    margin-bottom: 20rem;
+  }
+  
+  .wrapper {
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+
+/* ROOT VARIABLES */
+:root {
+  --color-primary: #ebeef1;
+  --color-danger: #ff7782;
+  --color-succes: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #c8d0d8;
+  --color-dark: #363949;
+  --color-default: #212022;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --card-border-radius: 1rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(var(--color-light));
+}
+
+
+
+
+.padding {
+  height: 25px;
+} 
+
+
+/* SIDEBAR */
+
+aside {
+  height: 100vh;
+  width: 25vh;
+}
+
+aside .top {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+
+aside .logo {
+  display: flex;
+  gap: 0.8rem;
+}
+
+aside .logo img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+aside .sidebar {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+aside h3 {
+  font-weight: 500;
+}
+
+aside .sidebar a {
+  display: flex;
+  color: var(--color-info-dark);
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  height: 3.7rem;
+  transition: all 300ms ease;
+}
+
+#whiteline {
+  width: 80%;
+  justify-self: center;
+  height: 1px;
+  background-color: white;
+  margin: 10px 0; /* Adjust margin as needed */
+}
+
+aside .sidebar a span {
+  font-size: 1.6rem;
+}
+
+aside .sidebar a:hover {
+  margin-right: 40px;
+  background: white;
+  border-radius: var(--border-radius-1);
+  color: var(--color-dark);
+}
+
+aside .sidebar a:hover span {
+  margin-left: 1rem;
+}
+
+.main {
+  display: flex; /* Use flexbox to arrange main and right container side by side */
+}
+
+.wrapper {
+  width: 1650px;
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  margin-right: 5rem;
+  background: var(--color-primary);
+  border-radius: var(--card-border-radius);
+}
+
+.wrapper-top {
+  height: 80px;
+  padding: 1.2rem;
+  border-radius: inherit;
+  display: flex;
+}
+
+h1 {
+  padding-left: 1rem;
+  color: var(--color-dark);
+}
+
+.wrapper .profile-photo {
+  margin-left: auto;
+}
+
+.wrapper-main {
+  flex: 1;
+  padding: 2rem;
+  border-radius: inherit;
+  justify-content: center;
+}
+
+
+/* DISCOVER */
+
+#cards-title {
+  padding-left: 2rem;
+  color: var(--color-dark);
+  margin-bottom: 1rem; /* Adjust the value as needed */
+}
+.main-scroll-div {
+  height: 200px;
+  display: flex;
+  margin: 0 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  -webkit-overflow-scrolling: touch;
+  /* background: #e4e4e4;*/
+}
+
+.cover {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+
+
+.scroll-images {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow: auto;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.cards {
+  position: relative;
+  min-width: 250px;
+  height: 250px ;
+  margin: 0 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  background: var(--color-background);
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.cards::before,
+.cards::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: inherit;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  transition: box-shadow 0.3s ease;
+}
+
+.cards::after {
+  top: auto;
+  bottom: 0;
+  box-shadow: 0 -10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.cards:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cards:hover::before,
+.cards:hover::after {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.card-img::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+#card1 {
+  width: 100%;
+  height: 96%;
+}
+
+.cards h4 {
+  text-align: center;
+}
+
+.cards-img {
+  width: 80%; /* This will make card2 80% smaller */
+  justify-self: center;
+}
+
+
+#news-title {
+  margin-top: 5rem;
+  padding-left: 2rem;
+  color: var(--color-dark);
+}
+
+.news-wrapper {
+  height: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+}
+
+.news {
+  width: calc(33.33% - 1rem);
+  margin: 0.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: var(--color-background);
+  display: flex;
+  flex-direction: column; /* Set flex direction to column for proper stacking */
+}
+
+.news.news1 {
+  background-color: rgb(204, 240, 252); /* Replace with the desired color for the first news card */
+}
+
+.news.news2 {
+  background-color: rgb(243, 186, 186); /* Replace with the desired color for the second news card */
+}
+
+.news.news3 {
+  background-color: rgb(212, 245, 212); /* Replace with the desired color for the third news card */
+}
+
+
+.news h3.newstitle {
+  margin-bottom: 0.5rem; /* Add spacing between title and description */
+}
+
+.news .newsdescription {
+  flex: 1; /* Take up the majority of the class */
+}
+
+.news h3.newsurl {
+  margin-top: 0.5rem; /* Add spacing between description and URL */
+}
+
+.newsfooter {
+  margin-top: auto; /* Push the .newsfooter to the bottom */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  align-items: center; /* Align child elements in the center vertically */
+}
+
+.newssource,
+.newsdate {
+  /* flex: 1;  Remove this line to allow content to determine width */
+  margin-right: 1rem; /* Add spacing between source and date */
+}

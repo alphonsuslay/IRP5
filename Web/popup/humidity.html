@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <style>
+    body {
+  background: #ebeef1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+
+  <title>Humidity Config</title>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <label for="topic">Set Topic Name:</label>
+      <input type="text" id="topic" name="topic" placeholder="Humidity Topic" required>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  // Get the form element
+  const form = document.querySelector('form');
+
+  // Add a submit event listener to the form
+  form.addEventListener('submit', function (event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Get the input value
+    const topicInput = document.getElementById('topic');
+    const topic = topicInput.value.trim();
+
+    // Check if the topic is not empty
+    if (topic) {
+      // Store the topic in localStorage
+      localStorage.setItem('HumidityTopic', topic);
+
+      // Close the popup window (assuming the window is opened using window.open)
+      window.close();
+    } else {
+      // Display an error message or take other appropriate action if the input is empty
+      alert('Please enter a topic name.');
+    }
+  });
+});
+
+</script>
+
+</html>
