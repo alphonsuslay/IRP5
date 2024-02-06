@@ -170,3 +170,11 @@
     • Start a new conversation with @botfather.
     • Type /newbot > Give the bot a name > Give the Bot a Username
     • Copy the HTTP API Token.
+    • Replace the Token and the username with ur API Token and your desired username.
+
+      ```py
+      token: Final = 'API_KEY'
+      username: Final = 'USERNAME'
+      ```
+    • Run the main.py file to get the bot Up and Running.
+
