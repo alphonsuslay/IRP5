@@ -31,6 +31,7 @@
 1. **Install Firebase Tools**: <br>
 
     • Open your terminal in Visual Studio Code.<br>
+    • Make sure that the terminal directory is inside the Web Folder
     • Run the following command to install Firebase tools globally:
 
         npm install -g firebase-tools
@@ -167,9 +168,9 @@
 
 2. **Creating Telegram Bot***: <br>
 
-    • Start a new conversation with @botfather.
-    • Type /newbot > Give the bot a name > Give the Bot a Username
-    • Copy the HTTP API Token.
+    • Start a new conversation with @botfather.<br>
+    • Type /newbot > Give the bot a name > Give the Bot a Username<br>
+    • Copy the HTTP API Token.<br>
     • Replace the Token and the username with ur API Token and your desired username.
 
       ```py
