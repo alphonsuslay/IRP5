@@ -83,3 +83,78 @@
 
     • The terminal will return with your website URL.
 
+
+## Setting up Arduino IDE
+
+1. **Downloading Libraries**: <br>
+
+    • Download the libraries from the library folder.<br>
+    • In addition, also download firebase library inside the Arduino IDE itself.<br>
+    • In the Arduino IDE, Open your library Manager and search for Firebase. Download the 2 libraries by Mobzit<br>    - *Firebase Arduino Client Library for ESP8266 and ESP32* <br>    - *Firebase ESP32 Client*
+
+2. **Setting File Preference**: <br>
+
+    • Click on File > Preference, and set the sketchbook location to be where your libraries are. <br>
+
+3. **Setting up & Running the Firebase Code**: <br>
+    • Change the ssid and password to your Wifi SSID and Password.<br>
+    • NOTE: Wifi/Hotspot has to be 2.4G bandwidth for the Wifi Module to work.
+
+
+      ```c++
+      const char *ssid = "YOUR_SSID";
+      const char *password = "WIFI_PASSWORD";
+      ```
+    • Head over to your firebase console. On the left navigation bar, open the settings icon beside "Project Overview", and click open the "Project Settings" feature.<br>
+    • Copy the Web API Key provided and replace the *API KEY* in the arduino code.
+
+      ```c++
+      #define API_KEY ""
+      ```
+    • Head over to the realtime database, and copy the url as provided. Replace the *DATABASE_URL* in the arduino code
+
+      ```c++
+      #define DATABASE_URL "https://{project name}-default-rtdb.{availability zone}.firebasedatabase.app/"
+      ```
+
+    • Search for the ``` connectToFirebase()``` function, and modify the email and password.
+      ```c++
+      // Firebase Setup
+      void connectToFirebase()
+      {
+        config.api_key = API_KEY;
+        config.database_url = DATABASE_URL;
+        if (Firebase.signUp(&config, &auth, "33sSFssss3@outlook.com", "MkDpI9m22")) //Replace with any random word each time before u run the code
+        {
+          Serial.println("Sign Up OK");
+          SignUpOK = true;
+        }
+        else
+        {
+          Serial.printf("Sign Up failed: %s\n", config.signer.signupError.message.c_str());
+        }
+      
+        config.token_status_callback = tokenStatusCallback;
+        Firebase.begin(&config, &auth);
+        Firebase.reconnectWiFi(true);
+      }
+      ```
+    • Lastly, run the code and wait for between 1 - 5mins for it to upload successfully.
+   
+4. **Running BLE Code**: <br>
+
+    • After successfully running the code, code will ```Serial.printfln("Waiting a client connection to notify...")<br>
+    • You can then use your MIT App and connect to the ESP32. After that, the data will immediately send the data to the Mobile Application.
+
+
+## MIT App Inventor
+
+1. Setting up & Running the Mobile Application
+   
+    • Ensure that you have MIT App Companion installed.<br>
+    • Download the *aia source file* above and import it into your MIT App Inventor<br>
+    • Connect your MIT App Companion with the application by linking it together with the code.<br>
+    • NOTE: The application only works on Android.
+
+
+   
