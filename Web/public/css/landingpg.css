@@ -1,0 +1,454 @@
+/* ROOT VARIABLES */
+:root {
+  --color-primary: #ebeef1;
+  --color-danger: #ff7782;
+  --color-succes: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #c8d0d8;
+  --color-dark: #363949;
+  --color-default: #212022;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --card-border-radius: 1rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(var(--color-light));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins, sans-serif;
+  font-size: 0.88rem;
+  background: var(--color-primary);
+  user-select: none;
+  overflow-x: hidden;
+}
+
+.text-dark {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39/var(--tw-text-opacity));
+}
+
+.text-grey {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99/var(--tw-text-opacity));
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  flex-grow: 1; /* Takes up the available space to push header-middle to the center */
+}
+
+.header-right {
+  flex-grow: 1;
+  justify-content: flex-end; /* Align the content to the right */
+}
+
+.header-middle a {
+  color: black;
+  font-size: 1rem; 
+  margin-right: 30px; /* Adjust the gap between anchors */
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.profile-icon {
+  width: 40px; 
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%; 
+}
+
+
+/* SECTION 1 */
+#homesection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh; 
+  padding: 20px;
+
+  /* border: 2px solid red;
+  border-radius: var(--border-radius-2); */
+}
+
+/* First Section Styles */
+.homeMainText {
+  padding-top: 15rem;
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250/var(--tw-text-opacity));;
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 1rem; /* Adjust the margin bottom */
+  font-weight: 700;
+}
+
+.homeMottoText {
+  margin-top: 0.5rem; /* Adjust the margin bottom */
+  color: var(--color-dark);
+  font-size: 1.1rem;
+  font-weight: 200;
+  line-height: 2rem;
+  text-align: center; /* Center the text within the section */
+}
+
+.getStartedBtn {
+  margin-top: 2rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 37 84/var(--tw-bg-opacity));
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 12px 20px;
+  font-size: 1rem; /* Adjust the font size */
+  border: none;
+  border-radius: 10rem; /* Adjust the border-radius if needed */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-button:hover {
+  background-color: rgb(21, 21, 163);
+}
+
+/* Section 2 Styles */
+.section2 {
+  position: relative;
+  height: 80vh;
+   /* border: 2px solid red;
+  border-radius: var(--border-radius-2); */
+}
+
+
+.section2-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.section2-left {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 50%;
+  margin-left: 10rem;
+  padding-left: 4rem;
+}
+
+.section2-title {
+  color: var(--color-dark);
+  font-size: 3.5rem; /* Adjust the font size */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section2-description {
+  color: var(--color-);
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-weight: 340;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.section2-right {
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+  flex-grow: 1;
+  max-width: 30%; /* Adjust the width of the right side */
+  margin-right: 15rem;
+}
+
+.section2-logo {
+  width: 80%;
+  height: auto;
+}
+
+.section2-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem; /* Adjust the margin as needed */
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  margin-right: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250/var(--tw-text-opacity));;
+}
+
+/* SECTION 3 */
+
+.section3 {
+  position: relative;
+  height: 60vh;
+  background: #ebeef1;
+  /* border: 2px solid red;
+  border-radius: var(--border-radius-2); */
+}
+
+.section3-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  margin: 8rem 0;
+}
+
+.section3-left {
+  margin-left: 10rem;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden; /* Hide the overflow to prevent the image from spilling out */
+}
+
+.section3-image {
+  width: 70%; /* Set width to auto to maintain the original image width */
+  height: 70%; /* Set height to 100% to fill the container vertically */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  border-radius: var(--card-border-radius);
+}
+
+
+.section3-right {
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20rem;
+}
+
+.section3-title {
+  color: var(--color-dark);
+  font-size: 3.5rem; /* Adjust the font size */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.key-feature {
+  margin-top: 1rem;
+  margin-bottom: rem; /* Adjust the margin between features as needed */
+}
+
+.key-feature-header {
+  display: flex;
+  align-items: center;
+}
+
+.key-feature-header .material-symbols-outlined {
+  margin-right: 0.5rem; 
+}
+
+.key-feature-title {
+  color: rgb(57, 95, 219);
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.key-feature-description {
+  color: var(--color-);
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-weight: 300;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+/* Section 4 Styles */
+.section4 {
+  position: relative;
+  height: 50vh;
+  background: #ebeef1;
+  /* border: 2px solid red;
+  border-radius: var(--border-radius-2); */
+}
+
+.section4-content {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center;
+  padding: 20px;
+  margin: 8rem 0;
+}
+
+/* Left Side Styles */
+.section4-left,
+.section4-middle,
+.section4-right {
+  flex: 1;
+  padding: 0 20px; /* Adjust padding as needed */
+  text-align: center; /* Center the text within each section */
+}
+
+.section4-title {
+  color: var(--color-dark);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section4-description {
+  color: var(--color-);
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-weight: 300;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 1rem;
+}
+
+.footer {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 37 84/var(--tw-bg-opacity));
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center;
+}
+
+.footer-title {
+  padding: 2rem 0;
+  color: var(--color-background);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footergetStartedBtn {
+  margin-bottom: 2rem;
+  --tw-bg-opacity: 1;
+  color: rgb(23 37 84/var(--tw-bg-opacity));
+  background-color: var(--color-white);
+  font-weight: 600;
+  padding: 10px 20px;
+  font-size: 1rem; /* Adjust the font size */
+  border: none;
+  border-radius: 10rem; /* Adjust the border-radius if needed */
+  cursor: pointer;
+}
+
+/* Media Queries for Phone View */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.75rem; /* Adjust the font size for smaller screens */
+  }
+
+  .homeMainText {
+    font-size: 3rem; /* Adjust the font size for smaller screens */
+  }
+
+  /* Adjust header styles for smaller screens */
+  .header-middle a {
+    font-size: 0.9rem;
+    margin-right: 20px;
+  }
+
+  .profile-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Section 2 Styles for smaller screens */
+  .section2-content {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    align-items: center;
+  }
+
+  .section2-left,
+  .section2-right {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .section2-logo {
+    width: 60%;
+  }
+
+  /* Section 3 Styles for smaller screens */
+  .section3-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section3-left {
+    margin-left: 0;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .section3-right {
+    margin-right: 0;
+  }
+
+  .section3-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Section 4 Styles for smaller screens */
+  .section4-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section4-left,
+  .section4-middle,
+  .section4-right {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .footer-title {
+    font-size: 2rem;
+  }
+
+  .footergetStartedBtn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}

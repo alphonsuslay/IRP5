@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>thehealthcats</title>
+  <link rel="stylesheet" href="css/landingpg.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="icon" href="assets/logo.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="assets/heart-beat.png" alt="Profile Icon" class="profile-icon">
+    </div>
+    <div class="header-middle">
+      <a class="text-dark" href="#Overview">Website Overview</a>
+      <a class="text-dark" href="#Features">Key Features</a>
+      <a class="text-dark" href="#Functionality">How it Works</a>
+    </div>
+    <div class="header-right">
+      <img src="assets/pfp.jpeg" alt="Profile Icon" class="profile-icon">
+    </div>
+  </header>
+
+  <!-- First Section -->
+  <section id="homesection">
+    <h1 class="homeMainText">thehealthcats.xyz</h1>
+    <p class="homeMottoText">Empowering Your Health Journey: <br>Real-time Data and Personalized Tips at Your Fingertips.</p>
+    <button class="getStartedBtn">Get Started</button>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="Overview" class="section2">
+    <div class="section2-content">
+
+      <div class="section2-left">
+        <h2 class="section2-title">Website Overview</h2>
+        <p class="section2-description">
+          Welcome to <strong style="color: rgb(57, 95, 219)">thehealthcats</strong>, a health-centric platform dedicated to providing real-time insights and personalized health tips.
+          <br>
+          Our dashboard goes beyond, seamlessly <strong style="color: rgb(57, 95, 219)">integrating with an ESP32 connected to sensors</strong> and the <strong style="color: rgb(57, 95, 219)">Realtime Database</strong>, offering a live display of your health data.
+          <br>
+          <br>
+          Explore our Discover page for curated health tips to inspire and guide you on your wellness journey.
+        </p>
+
+        <!-- Icons -->
+        <div class="section2-icons">
+          <span class="material-symbols-outlined">
+            desktop_windows
+          </span>
+          <span class="material-symbols-outlined">
+            database
+          </span> 
+          <span class="material-symbols-outlined">
+            home_iot_device
+          </span>
+        </div>    
+      </div>
+
+      <div class="section2-right">
+        <img src="assets/logo.png" alt="Logo" class="section2-logo">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section id="Features" class="section3">
+    <div class="section3-content">
+
+      <!-- Left Side (Image) -->
+      <div class="section3-left">
+        <img src="assets/dashboardimg.png" alt="Image" class="section3-image">
+      </div>
+
+      <!-- Right Side (Key Features) -->
+      <div class="section3-right">
+        <h2 class="section3-title">Key Features</h2>
+        <!-- Feature 1 -->
+        <div class="key-feature">
+          <div class="key-feature-header">
+            <span class="material-symbols-outlined">space_dashboard</span>
+          <h2 class="key-feature-title">
+            Real-time Dashboard
+          </h2>
+          </div>
+          <p class="key-feature-description">
+            • Connects to Firebase Realtime Database for live updates.
+            <br>
+            • Visualize your health metrics in a user-friendly dashboard.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="key-feature">
+          <div class="key-feature-header">
+            <span class="material-symbols-outlined">search</span>
+          <h2 class="key-feature-title">
+            Discover Page
+          </h2>
+          </div>
+          <p class="key-feature-description">
+            • Access a wealth of health tips and insights.
+            <br>
+            • Curated content to support your lifestyle and well-being.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="key-feature">
+          <div class="key-feature-header">
+            <span class="material-symbols-outlined">thumb_up</span>
+          <h2 class="key-feature-title">
+            Personalized Recommendations
+          </h2>
+          </div>
+          <p class="key-feature-description">
+            • Receive tailored health tips based on your interests.
+            <br>
+            • Continuous updates to keep you engaged and motivated.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  
+  <!-- Section 4 (How It Works) -->
+  <section id="Functionality" class="section4">
+    <div class="section4-content">
+      <!-- Left Side (Real-time Data) -->
+      <div class="section4-left">
+        <h2 class="section4-title">Real-time Data</h2>
+        <p class="section4-description">
+          Firebase Realtime Database keeps your dashboard constantly updated.
+          <br>
+          View your health metrics in an easily understandable format.
+        </p>
+      </div>
+      <!-- Right Side (Discover Health Tips) -->
+      <div class="section4-middle">
+        <h2 class="section4-title">Discover Health Tips</h2>
+        <p class="section4-description">
+          Explore the Discover page for curated health tips.
+          <br>
+          Tips tailored to your preferences and health goals.
+        </p>
+      </div>
+      <!-- Bottom Side (Stay Motivated) -->
+      <div class="section4-right">
+        <h2 class="section4-title">Stay Motivated</h2>
+        <p class="section4-description">
+          Receive personalized recommendations to enhance your well-being.
+          <br>
+          Use our platform to track your progress and stay motivated.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <h2 class="footer-title">Start Your Wellness Journey</h2>
+
+      <button class="footergetStartedBtn">Explore Your Dashboard</button>
+    </div>
+  </section>
+
+  <script>
+    // Function to open authentication.html after a 3-second delay
+    function openAuthenticationPageWithDelay() {
+      setTimeout(function() {
+        // Change "authentication.html" to the actual path of your authentication.html file
+        window.location.href = 'authentication.html';
+      }, 1000); // 3000 milliseconds (3 seconds) delay
+    }
+  
+    // Event listener for the "Get Started" button in the first section
+    document.querySelector('.getStartedBtn').addEventListener('click', function() {
+      // Check if the user is not logged in (replace with your actual condition)
+      var isLoggedIn = document.cookie.includes("loggedIn=true");
+      if (!isLoggedIn) {
+        openAuthenticationPageWithDelay();
+      } else {
+        // Add logic to handle the case when the user is already logged in
+        console.log("User is already logged in.");
+        window.location.href = 'dashboard/card.html';
+        // Add your logic to redirect to another page or perform other actions
+      }
+    });
+  
+    // Event listener for the "Explore Your Dashboard" button in the footer
+    document.querySelector('.footergetStartedBtn').addEventListener('click', function() {
+      // Check if the user is not logged in (replace with your actual condition)
+      var isLoggedIn = document.cookie.includes("loggedIn=true");
+      if (!isLoggedIn) {
+        openAuthenticationPageWithDelay();
+      } else {
+        // Add logic to handle the case when the user is already logged in
+        console.log("User is already logged in.");
+        window.location.href = 'dashboard/card.html';
+        // Add your logic to redirect to another page or perform other actions
+      }
+    });
+  </script>
+  
+  
+
+</body>
+</html>
