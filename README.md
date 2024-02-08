@@ -1,5 +1,5 @@
 # IRP5 - IoT Sensor Data to Cloud and Applications
-![image](https://github.com/alphonsuslay/IRP5/assets/147743151/61dba94c-1698-40dc-ab24-60e720bd3769)
+![image](https://github.com/alphonsuslay/IRP5/assets/147743151/6c707dfa-1b66-434a-ae18-ab94915e7e32)
 
 ## Setting up a Firebase Project
 
