@@ -1,6 +1,9 @@
 # IRP5 - IoT Sensor Data to Cloud and Applications
 ![image](https://github.com/alphonsuslay/IRP5/assets/147743151/6c707dfa-1b66-434a-ae18-ab94915e7e32)
 
+## About Project
+It is an IoT Cloud system that sends data from the sensors connected to the ESP32 to the Cloud. The Web Dashboard then retrieves the information from the Cloud and displays it.
+
 ## Setting up a Firebase Project
 
 1. **Go to Firebase Console**: <br>
